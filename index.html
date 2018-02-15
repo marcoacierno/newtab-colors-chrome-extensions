@@ -1,0 +1,53 @@
+<html>
+    <head>
+        <style>
+            body {
+                margin: 0;
+                padding: 0;
+            }
+
+            body div {
+                width: 100vw;
+
+                position: absolute;
+                top: 0;
+                left: 0;
+
+                transform: translateY(-100%);
+                transition: transform .5s;
+            }
+
+            body.ready div {
+                transform: translateY(0);
+            }
+
+            body div:nth-of-type(1) {
+                height: 100vh;
+                background: red;
+
+                transition: transform .5s .1s;
+            }
+
+            body div:nth-of-type(2) {
+                height: calc(100vh - 25vh);
+                background: pink;
+                transition: transform .5s .2s;
+            }
+
+            body div:nth-of-type(3) {
+                height: calc(100vh - 50vh);
+                background: orange;
+                transition: transform .5s .3s;
+            }
+
+            body div:nth-of-type(4) {
+                height: calc(100vh - 75vh);
+                background: rebeccapurple;
+                transition: transform .5s .4s;
+            }
+        </style>
+    </head>
+    <body>
+        <script src="./js.js" type="text/javascript"></script>
+    </body>
+</html>
