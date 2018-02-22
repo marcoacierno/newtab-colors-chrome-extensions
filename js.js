@@ -1,11 +1,18 @@
 window.onload = () => {
+    let backgroundColor = null;
+
     for (let i = 0; i < 4; ++i) {
         const color = randomColor();
         const div = document.createElement('div');
         div.style.background = color;
         document.body.appendChild(div);
+
+        if (i === 0) {
+            backgroundColor = color;
+        }
     }
 
+    document.body.style.backgroundColor = backgroundColor;
     requestAnimationFrame(() => document.body.classList.add('ready'));
 };
 
